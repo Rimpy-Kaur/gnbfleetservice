@@ -1,0 +1,284 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Body */
+body {
+  min-height: 100vh;
+  color: #000;
+  background-color: lightcyan; /* light gray */
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* Container */
+.container {
+  background-color: lightcyan;
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Header */
+header {
+  padding: 20px 50px;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.logo-box {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.logo-text {
+  font-size: 60px;
+  font-weight: 900;
+  color: #002b80;
+}
+
+.tagline {
+  font-size: 18px;
+  color: #002b80;
+  font-weight: bold;
+  margin-top: -5px;
+}
+
+/* Company Name */
+.header-text {
+  flex: 1;
+  text-align: center;
+}
+
+.header-text h1 {
+  font-size: 50px;
+  font-weight: bold;
+  color: #002b80;
+}
+
+.header-text p {
+  color: #000;
+  margin-top: 7px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Navigation */
+nav {
+  background: #002b80;
+  padding: 15px 0;
+  text-align: center;
+  position: relative;
+}
+
+.nav-list {
+  list-style: none;
+}
+
+.nav-list li {
+  display: inline-block;
+  margin: 0 25px;
+}
+
+.nav-list a {
+  color: #ffcc00;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+.nav-list a:hover {
+  background-color: rgba(255,204,0,0.2);
+  color: #002b80;
+}
+
+/* Hamburger Menu */
+.menu-toggle {
+  display: none;
+  font-size: 28px;
+  color: white;
+  cursor: pointer;
+  position: absolute;
+  right: 20px;
+  top: 12px;
+}
+
+/* Sections */
+section {
+  padding: 10px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: #002b80;
+}
+
+section p, section ul li {
+  font-weight: 400;
+  color: #000;
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+/* CTA Section - aligned with content sections */
+#cta {
+  background-color: #002b80; /* blue */
+  color: #ffcc00; /* yellow text */
+  padding: 40px 40px;
+  border-radius: 10px;
+  margin: 30px auto;
+  max-width: 900px; /* same width as About/Services */
+  display: flex;
+  justify-content: space-between; /* text left, buttons right */
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+#cta h2 {
+  font-size: 32px;
+  color: #ffcc00;
+  margin: 0; /* remove extra space */
+  flex: 1; /* take remaining space on left */
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  flex-shrink: 0; /* buttons don’t shrink */
+}
+
+
+.call-btn, .email-btn {
+  padding: 12px 22px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.call-btn {
+  background-color: #ffcc00;
+  color: #002b80;
+}
+
+.call-btn:hover {
+  background-color: #ffe066;
+}
+
+.email-btn {
+  background-color: #ffcc00;
+  color: #002b80;
+}
+
+.email-btn:hover {
+  background-color: #ffe066;
+}
+
+/* Why Choose Us Section */
+#why-choose-us ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#why-choose-us ul li {
+  margin-bottom: 10px;
+  font-weight: 400;
+  color: #002b80;
+}
+
+/* Working Hours */
+.hours {
+  background-color: rgba(255, 204, 0, 0.1);
+  padding: 15px 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.hours h3 {
+  color: #002b80;
+  margin-bottom: 10px;
+}
+
+.hours ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.hours ul li {
+  margin-bottom: 8px;
+}
+
+/* Footer */
+footer {
+  background-color: #002b80;
+  color: #ffcc00;
+  text-align: center;
+  padding: 18px;
+  margin-top: 30px;
+}
+
+/* Contact Info Flex */
+.contact-info {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .logo-text { font-size: 50px; }
+  .tagline { font-size: 16px; }
+  .header-text h1 { font-size: 24px; }
+  .header-text p { font-size: 14px; }
+
+  .menu-toggle { display: block; }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background-color: #002b80;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    width: 100%;
+    padding: 15px 0;
+    z-index: 10;
+  }
+
+  .nav-list li {
+    display: block;
+    margin: 15px 0;
+    text-align: center;
+  }
+
+  .nav-list.active { display: flex; }
+
+  .contact-info, .cta-buttons { flex-direction: column; gap: 15px; }
+}
