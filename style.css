@@ -30,42 +30,44 @@ header {
   justify-content: space-between;
   align-items: center;
   background: #002b80; /* dark navy */
-  padding: 22px 28px; /* bigger header */
+  padding: 35px 30px;  /* extended header */
   border-radius: 0 0 12px 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   color: #fff;
 }
 
 .logo-box {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 18px;
 }
 
 .logo-placeholder {
-  width: 70px;
-  height: 70px;
-  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  width: 85px; 
+  height: 85px;
+  background: linear-gradient(145deg, #ffcc00, #ffaa00, #ff8800);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 22px;
+  font-size: 26px;
   color: #002b80;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+  border: 3px solid #fff;
 }
 
 .header-text h1 {
-  font-size: 32px;
+  font-size: 36px;
   font-weight: 700;
-  color: #ffcc00;
+  color: #ffcc00; /* company name in gold */
 }
 
 .header-text p {
-  font-size: 15px;
-  font-weight: 500;
-  color: #e0e0e0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffcc00; /* tagline also in gold */
+  margin-top: 6px;
 }
 
 /* Nav */
@@ -84,11 +86,11 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 24px;
+  gap: 28px;
 }
 
 .nav-list li a {
-  color: #ffe066; /* brighter gold */
+  color: #ffe066;
   text-decoration: none;
   font-size: 18px;
   font-weight: 600;
@@ -98,8 +100,8 @@ nav {
 }
 
 .nav-list li a:hover {
-  background-color: #ffcc00; /* brighter gold background */
-  color: #002b80; /* navy text on hover */
+  background-color: #ffcc00;
+  color: #002b80;
 }
 
 /* Sections */
@@ -115,7 +117,7 @@ section {
 section h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #ffcc00;
+  color: #002b80;
 }
 
 section p, section ul li {
@@ -124,29 +126,28 @@ section p, section ul li {
   margin-bottom: 12px;
 }
 
-ul li {
-  margin-left: 10px;
-}
-
 /* CTA */
 #cta {
   background: linear-gradient(135deg, #002b80, #003c99);
   padding: 45px 35px;
   border-radius: 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
   text-align: center;
-  gap: 20px;
-  max-width: 900px;
+  color: #fff;
   margin: 40px auto;
+  max-width: 900px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+#cta h2 {
+  color: #ffcc00;
+  margin-bottom: 20px;
 }
 
 .cta-buttons {
   display: flex;
+  justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
 .call-btn, .email-btn {
@@ -158,9 +159,6 @@ ul li {
   text-decoration: none;
   font-size: 17px;
   transition: 0.3s;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .call-btn:hover, .email-btn:hover {
@@ -182,9 +180,10 @@ footer {
 /* Mobile */
 @media(max-width:768px){
 
-  .header-container { flex-wrap: nowrap; }
+  .header-container { flex-wrap: nowrap; padding: 25px 18px; }
+  .logo-placeholder { width: 65px; height: 65px; font-size: 20px; }
   .header-text h1 { font-size: 22px; }
-  .header-text p { font-size: 12px; }
+  .header-text p { font-size: 13px; }
 
   .menu-toggle { display: block; }
 
@@ -217,60 +216,3 @@ footer {
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
   .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
 }
-
-.call-btn:hover, .email-btn:hover {
-  background-color: #ffe066;
-  transform: translateY(-2px);
-  box-shadow: 0 0 10px rgba(255,204,0,0.7);
-}
-
-/* Footer */
-footer {
-  text-align: center;
-  color: #ffd95a;
-  background: #002b80;
-  padding: 20px;
-  border-top: 3px solid #ffd95a;
-  font-size: 14px;
-}
-
-/* Mobile */
-@media(max-width:768px){
-
-  .header-container { flex-wrap: nowrap; }
-  .header-text h1 { font-size: 20px; }
-  .header-text p { font-size: 12px; }
-
-  .menu-toggle { display: block; }
-
-  .nav-list {
-    display: none;
-    flex-direction: column;
-    background: #002b80;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 160px;
-    padding: 15px;
-    border-radius: 0 0 10px 10px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.35);
-  }
-
-  .nav-list.active { display: flex; }
-
-  .nav-list li {
-    text-align: right;
-    margin: 8px 0;
-  }
-
-  #cta {
-    flex-direction: column;
-    gap: 12px;
-    padding: 25px 15px;
-  }
-
-  .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
-  .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
-}
-
-
