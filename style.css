@@ -8,7 +8,7 @@
 
 body {
   min-height: 100vh;
-  background: #f8f9fc; /* soft light background */
+  background: #f8f9fc;
   color: #333;
 }
 
@@ -29,9 +29,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #002b80; /* professional dark navy */
-  padding: 15px 20px;
-  border-radius: 0 0 10px 10px;
+  background: #002b80; /* dark navy */
+  padding: 22px 28px; /* bigger header */
+  border-radius: 0 0 12px 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   color: #fff;
 }
@@ -39,31 +39,31 @@ header {
 .logo-box {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 }
 
 .logo-placeholder {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: linear-gradient(135deg, #ffcc00, #ff9900);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
   color: #002b80;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .header-text h1 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: #ffcc00;
 }
 
 .header-text p {
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 500;
   color: #e0e0e0;
 }
@@ -75,7 +75,7 @@ nav {
 
 .menu-toggle {
   display: none;
-  font-size: 28px;
+  font-size: 30px;
   cursor: pointer;
   color: #ffcc00;
 }
@@ -84,22 +84,22 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 24px;
 }
 
 .nav-list li a {
-  color: #ffcc00;
+  color: #ffe066; /* brighter gold */
   text-decoration: none;
-  font-size: 16px;
+  font-size: 18px;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 8px 14px;
   border-radius: 6px;
   transition: 0.3s;
 }
 
 .nav-list li a:hover {
-  background-color: rgba(255,204,0,0.2);
-  color: #fff;
+  background-color: #ffcc00; /* brighter gold background */
+  color: #002b80; /* navy text on hover */
 }
 
 /* Sections */
@@ -131,7 +131,7 @@ ul li {
 /* CTA */
 #cta {
   background: linear-gradient(135deg, #002b80, #003c99);
-  padding: 40px 30px;
+  padding: 45px 35px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -152,15 +152,70 @@ ul li {
 .call-btn, .email-btn {
   background-color: #ffcc00;
   color: #002b80;
-  padding: 14px 26px;
+  padding: 14px 28px;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  font-size: 16px;
+  font-size: 17px;
   transition: 0.3s;
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.call-btn:hover, .email-btn:hover {
+  background-color: #ffe066;
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px rgba(255,204,0,0.7);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #ffd95a;
+  background: #002b80;
+  padding: 20px;
+  border-top: 3px solid #ffd95a;
+  font-size: 14px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+
+  .header-container { flex-wrap: nowrap; }
+  .header-text h1 { font-size: 22px; }
+  .header-text p { font-size: 12px; }
+
+  .menu-toggle { display: block; }
+
+  .nav-list {
+    display: none;
+    flex-direction: column;
+    background: #002b80;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 180px;
+    padding: 15px;
+    border-radius: 0 0 10px 10px;
+    box-shadow: 0 5px 12px rgba(0,0,0,0.35);
+  }
+
+  .nav-list.active { display: flex; }
+
+  .nav-list li {
+    text-align: right;
+    margin: 10px 0;
+  }
+
+  #cta {
+    flex-direction: column;
+    gap: 12px;
+    padding: 25px 15px;
+  }
+
+  .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
+  .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
 }
 
 .call-btn:hover, .email-btn:hover {
@@ -217,3 +272,4 @@ footer {
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
   .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
 }
+
