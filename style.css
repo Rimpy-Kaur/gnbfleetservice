@@ -8,8 +8,8 @@
 
 body {
   min-height: 100vh;
-  background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
-              url('background.jpg') no-repeat center center / cover;
+  /* background: linear-gradient(rgba(255,255,255,0.2), rgba(255,255,255,0.2)),
+              url('background.jpg') no-repeat center center / cover; */
   color: #f5f5f5;
 }
 
@@ -220,3 +220,4 @@ footer {
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
   .call-btn, .email-btn { width: 180px; font-size: 16px; padding: 12px 0; }
 }
+
