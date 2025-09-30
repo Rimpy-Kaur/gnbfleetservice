@@ -10,14 +10,14 @@
 body {
   min-height: 100vh;
   color: #000;
-  background-color: lightcyan; /* light gray */
+  background-color: white;
   font-size: 16px;
   line-height: 1.6;
 }
 
 /* Container */
 .container {
-  background-color: lightcyan;
+  background-color:white;
   width: 95%;
   max-width: 1200px;
   margin: auto;
@@ -282,3 +282,4 @@ footer {
 
   .contact-info, .cta-buttons { flex-direction: column; gap: 15px; }
 }
+
