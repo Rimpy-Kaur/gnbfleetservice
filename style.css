@@ -32,8 +32,7 @@ header {
   align-items: center;
   flex-wrap: nowrap;
   padding: 0 20px;
-  /* background: none;   /* remove the transparent background */
-  box-shadow: none;   /* remove shadow if you don’t want it */ */
+  background: #003366;
 }
 .logo-box {
   display: flex;
@@ -272,6 +271,7 @@ footer {
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
   .call-btn, .email-btn { width: 180px; font-size: 16px; padding: 12px 0; }
 }
+
 
 
 
