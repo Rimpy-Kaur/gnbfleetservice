@@ -219,7 +219,7 @@ footer {
 
   #cta h2 {
     font-size: 20px;
-    color: #ffd700 !important; /* yellow on mobile */
+    color: #ffcc00 !important; /* yellow on mobile */
   }
 
   #cta {
@@ -231,4 +231,5 @@ footer {
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
   .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
 }
+
 
