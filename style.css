@@ -115,8 +115,9 @@ section {
 section h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #002b80;
+  color: #002b80; /* dark blue for most headings */
 }
+
 
 section p, section ul li {
   font-size: 16px;
@@ -142,6 +143,9 @@ ul li {
   max-width: 900px;
   margin: 40px auto;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+#cta h2 {
+  color: #ffd700; /* bright yellow */
 }
 
 .cta-buttons {
@@ -217,3 +221,4 @@ footer {
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
   .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
 }
+
