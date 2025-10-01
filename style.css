@@ -3,151 +3,147 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: Arial, sans-serif;
 }
 
+/* Body */
 body {
-  min-height: 100vh;
-  background: #f8f9fc;
+  background: #f9f9f9;
   color: #333;
-}
-
-/* Container */
-.container {
-  width: 95%;
-  max-width: 1200px;
-  margin: auto;
-  padding: 20px;
 }
 
 /* Header */
 header {
-  padding: 0;
-}
-
-.header-container {
+  background-color: #003366; /* deep navy */
+  color: white;
+  padding: 20px 40px;
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  align-items: center;
-  background: #002b80; /* dark navy */
-  padding: 35px 30px;  /* extended header */
-  border-radius: 0 0 12px 12px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  color: #fff;
-}
-
-.logo-box {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-}
-
-.logo-placeholder {
-  width: 85px; 
-  height: 85px;
-  background: linear-gradient(145deg, #ffcc00, #ffaa00, #ff8800);
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-weight: bold;
-  font-size: 26px;
-  color: #002b80;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
-  border: 3px solid #fff;
-}
-
-.header-text h1 {
-  font-size: 36px;
-  font-weight: 700;
-  color: #ffcc00; /* company name in gold */
-}
-
-.header-text p {
-  font-size: 16px;
-  font-weight: 600;
-  color: #ffcc00; /* tagline also in gold */
-  margin-top: 6px;
-}
-
-/* Nav */
-nav {
+  height: 120px; /* taller header */
   position: relative;
 }
 
-.menu-toggle {
-  display: none;
-  font-size: 30px;
-  cursor: pointer;
-  color: #ffcc00;
+/* Logo + company name */
+.logo {
+  display: flex;
+  align-items: center;
 }
 
-/* Nav list */
-.nav-list {
+.logo img {
+  width: 80px; /* bigger logo */
+  height: auto;
+  margin-right: 15px;
+}
+
+.company-name {
+  font-size: 28px;
+  font-weight: bold;
+  margin-left: 10px; /* push name right */
+}
+
+/* Navbar */
+nav {
+  margin-left: auto;
+  margin-right: 20px;
+}
+
+nav ul {
   list-style: none;
   display: flex;
-  gap: 28px;
-}
-
-.nav-list li a {
-  color: #ffe066;
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 8px 14px;
-  border-radius: 6px;
-  transition: 0.3s;
-}
-
-.nav-list li a:hover {
-  background-color: #ffcc00;
-  color: #002b80;
-}
-
-/* Sections */
-section {
-  padding: 40px 20px;
-  max-width: 900px;
-  margin: 30px auto;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-}
-
-section h2 {
-  font-size: 28px;
-  margin-bottom: 15px;
-  color: #ffcc00;
-}
-
-section p, section ul li {
-  font-size: 16px;
-  line-height: 1.7;
-  margin-bottom: 12px;
-}
-
-/* CTA */
-#cta {
-  background: linear-gradient(135deg, #002b80, #003c99);
-  padding: 45px 35px;
-  border-radius: 10px;
-  text-align: center;
-  color: #fff;
-  margin: 40px auto;
-  max-width: 900px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-}
-
-#cta h2 {
-  color: #ffcc00;
-  margin-bottom: 20px;
-}
-
-.cta-buttons {
-  display: flex;
-  justify-content: center;
   gap: 20px;
-  flex-wrap: wrap;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  padding: 6px 12px;
+  border-radius: 6px;
+  transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background: #ffcc00; /* hover yellow */
+  color: #003366;      /* dark navy text */
+}
+
+/* Call Now button */
+.call-btn {
+  background: #ffcc00;
+  color: #003366;
+  padding: 10px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.call-btn:hover {
+  background: #e6b800;
+  transform: scale(1.05);
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background: url('your-bg.jpg') no-repeat center center/cover;
+  color: white;
+}
+
+.hero h2 {
+  font-size: 42px;
+  margin-bottom: 20px;
+  color: #ffcc00; /* Yellow heading */
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* Mobile Styles */
+.menu-toggle {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  nav {
+    width: 100%;
+    margin: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+    background: #002244;
+    width: 100%;
+    padding: 10px 0;
+    display: none;
+  }
+
+  nav ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+    margin-left: auto; /* keeps toggle button on the right */
+  }
+
+  .call-btn {
+    margin-top: 10px;
+    align-self: flex-start;
+  }
 }
 
 .call-btn, .email-btn {
@@ -216,4 +212,5 @@ footer {
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
   .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
 }
+
 
