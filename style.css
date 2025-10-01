@@ -29,8 +29,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: #002b80; /* professional dark navy */
-  padding: 15px 20px;
+  background: #002b80; /* dark navy header */
+  padding: 25px 20px; /* taller header */
   border-radius: 0 0 10px 10px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.25);
   color: #fff;
@@ -39,31 +39,31 @@ header {
 .logo-box {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 15px;
 }
 
 .logo-placeholder {
-  width: 60px;
-  height: 60px;
+  width: 70px;
+  height: 70px;
   background: linear-gradient(135deg, #ffcc00, #ff9900);
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
   color: #002b80;
   box-shadow: 0 2px 6px rgba(0,0,0,0.3);
 }
 
 .header-text h1 {
-  font-size: 28px;
+  font-size: 32px;
   font-weight: 700;
   color: #ffcc00;
 }
 
 .header-text p {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 500;
   color: #e0e0e0;
 }
@@ -84,7 +84,7 @@ nav {
 .nav-list {
   list-style: none;
   display: flex;
-  gap: 20px;
+  gap: 25px;
 }
 
 .nav-list li a {
@@ -92,14 +92,14 @@ nav {
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
-  padding: 6px 12px;
+  padding: 8px 16px;
   border-radius: 6px;
   transition: 0.3s;
 }
 
 .nav-list li a:hover {
-  background-color: rgba(255,204,0,0.2);
-  color: #fff;
+  background-color: #ffd700; /* lighter hover */
+  color: #002b80;
 }
 
 /* Sections */
@@ -115,9 +115,8 @@ section {
 section h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #002b80; /* dark blue for most headings */
+  color: #002b80; /* blue for all except CTA */
 }
-
 
 section p, section ul li {
   font-size: 16px;
@@ -129,10 +128,10 @@ ul li {
   margin-left: 10px;
 }
 
-/* CTA */
+/* CTA section */
 #cta {
   background: linear-gradient(135deg, #002b80, #003c99);
-  padding: 40px 30px;
+  padding: 50px 30px;
   border-radius: 10px;
   display: flex;
   justify-content: center;
@@ -144,8 +143,9 @@ ul li {
   margin: 40px auto;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
 }
+
 #cta h2 {
-  color: #ffd700; /* bright yellow */
+  color: #ffd700 !important; /* yellow heading */
 }
 
 .cta-buttons {
@@ -187,7 +187,7 @@ footer {
 @media(max-width:768px){
 
   .header-container { flex-wrap: nowrap; }
-  .header-text h1 { font-size: 20px; }
+  .header-text h1 { font-size: 22px; }
   .header-text p { font-size: 12px; }
 
   .menu-toggle { display: block; }
@@ -212,6 +212,16 @@ footer {
     margin: 8px 0;
   }
 
+  section h2 {
+    font-size: 22px;
+    color: #002b80; /* ensure blue on mobile */
+  }
+
+  #cta h2 {
+    font-size: 20px;
+    color: #ffd700 !important; /* yellow on mobile */
+  }
+
   #cta {
     flex-direction: column;
     gap: 12px;
@@ -221,5 +231,3 @@ footer {
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
   .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
 }
-
-
