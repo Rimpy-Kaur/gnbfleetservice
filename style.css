@@ -3,181 +3,183 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Arial, sans-serif;
+  font-family: 'Poppins', sans-serif;
 }
 
 /* Body */
 body {
-  background: #f9f9f9;
+  min-height: 100vh;
+  background: #fff; /* white background */
   color: #333;
+}
+
+/* Container */
+.container {
+  width: 95%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
 }
 
 /* Header */
 header {
-  background-color: #003366; /* deep navy */
-  color: white;
-  padding: 20px 40px;
+  background-color: #003366; /* dark blue */
+  padding: 30px 20px; /* taller header */
+  border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 120px; /* taller header */
+  flex-wrap: wrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   position: relative;
 }
 
-/* Logo + company name */
-.logo {
+/* Logo */
+.logo-box {
   display: flex;
   align-items: center;
+  gap: 15px;
 }
 
-.logo img {
-  width: 80px; /* bigger logo */
-  height: auto;
-  margin-right: 15px;
-}
-
-.company-name {
-  font-size: 28px;
+.logo-placeholder {
+  width: 100px;
+  height: 100px;
+  background: linear-gradient(135deg, #ffcc00, #ff9900);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   font-weight: bold;
-  margin-left: 10px; /* push name right */
+  font-size: 28px;
+  color: #003366;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* Company name */
+.header-text {
+  margin-left: 20px;
+}
+
+.header-text h1 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #ffcc00; /* yellow */
+}
+
+.header-text p {
+  font-size: 16px;
+  font-weight: 500;
+  color: #fff;
+  opacity: 0.9;
 }
 
 /* Navbar */
 nav {
-  margin-left: auto;
-  margin-right: 20px;
+  position: relative;
 }
 
-nav ul {
+.nav-list {
   list-style: none;
   display: flex;
   gap: 20px;
 }
 
-nav ul li a {
-  color: white;
+.nav-list li a {
+  color: #ffcc00;
   text-decoration: none;
   font-size: 16px;
+  font-weight: 600;
   padding: 6px 12px;
   border-radius: 6px;
-  transition: background 0.3s, color 0.3s;
+  transition: 0.3s;
 }
 
-nav ul li a:hover {
-  background: #ffcc00; /* hover yellow */
-  color: #003366;      /* dark navy text */
-}
-
-/* Call Now button */
-.call-btn {
-  background: #ffcc00;
+.nav-list li a:hover {
+  background-color: #ffd633;
   color: #003366;
-  padding: 10px 18px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s, transform 0.3s;
 }
 
-.call-btn:hover {
-  background: #e6b800;
-  transform: scale(1.05);
-}
-
-/* Hero Section */
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: url('your-bg.jpg') no-repeat center center/cover;
-  color: white;
-}
-
-.hero h2 {
-  font-size: 42px;
-  margin-bottom: 20px;
-  color: #ffcc00; /* Yellow heading */
-}
-
-.hero p {
-  font-size: 18px;
-}
-
-/* Mobile Styles */
+/* Menu toggle for mobile */
 .menu-toggle {
   display: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffcc00;
 }
 
-@media (max-width: 768px) {
-  header {
-    flex-wrap: wrap;
-    height: auto;
-  }
+/* Sections */
+section {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: 30px auto;
+  background: rgba(0,0,0,0.05);
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
 
-  nav {
-    width: 100%;
-    margin: 0;
-  }
+section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #ffcc00; /* yellow for fleet section */
+}
 
-  nav ul {
-    flex-direction: column;
-    background: #002244;
-    width: 100%;
-    padding: 10px 0;
-    display: none;
-  }
+section p, section ul li {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
 
-  nav ul.show {
-    display: flex;
-  }
+/* CTA buttons */
+#cta {
+  background: #003366;
+  color: #fff;
+  padding: 50px 40px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 20px;
+}
 
-  .menu-toggle {
-    display: block;
-    background: none;
-    border: none;
-    color: white;
-    font-size: 28px;
-    cursor: pointer;
-    margin-left: auto; /* keeps toggle button on the right */
-  }
-
-  .call-btn {
-    margin-top: 10px;
-    align-self: flex-start;
-  }
+.cta-buttons {
+  display: flex;
+  gap: 20px;
 }
 
 .call-btn, .email-btn {
   background-color: #ffcc00;
-  color: #002b80;
-  padding: 14px 28px;
+  color: #003366;
+  padding: 15px 30px;
   border-radius: 8px;
   font-weight: bold;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
   transition: 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .call-btn:hover, .email-btn:hover {
-  background-color: #ffe066;
-  transform: translateY(-2px);
-  box-shadow: 0 0 10px rgba(255,204,0,0.7);
+  background-color: #ffd633;
+  transform: translateY(-3px);
+  box-shadow: 0 0 15px rgba(255,204,0,0.5);
 }
 
 /* Footer */
 footer {
   text-align: center;
-  color: #ffd95a;
-  background: #002b80;
-  padding: 20px;
-  border-top: 3px solid #ffd95a;
-  font-size: 14px;
+  color: #ffcc00;
+  background: #003366;
+  padding: 25px;
+  border-top: 3px solid #ffcc00;
 }
 
-/* Mobile */
+/* Mobile styles */
 @media(max-width:768px){
-
-  .header-container { flex-wrap: nowrap; padding: 25px 18px; }
-  .logo-placeholder { width: 65px; height: 65px; font-size: 20px; }
+  .header-container { flex-wrap: wrap; }
   .header-text h1 { font-size: 22px; }
   .header-text p { font-size: 13px; }
 
@@ -186,31 +188,25 @@ footer {
   .nav-list {
     display: none;
     flex-direction: column;
-    background: #002b80;
+    background: #002244;
     position: absolute;
     top: 100%;
     right: 0;
     width: 180px;
-    padding: 15px;
+    padding: 10px 0;
     border-radius: 0 0 10px 10px;
-    box-shadow: 0 5px 12px rgba(0,0,0,0.35);
   }
 
   .nav-list.active { display: flex; }
 
-  .nav-list li {
-    text-align: right;
-    margin: 10px 0;
-  }
+  .nav-list li { text-align: right; margin: 10px 0; }
 
   #cta {
     flex-direction: column;
     gap: 12px;
-    padding: 25px 15px;
+    padding: 30px 20px;
   }
 
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
-  .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
+  .call-btn, .email-btn { width: 180px; font-size: 16px; padding: 12px 0; }
 }
-
-
