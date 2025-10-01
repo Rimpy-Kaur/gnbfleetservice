@@ -88,7 +88,7 @@ nav {
 }
 
 .nav-list li a {
-  color: #ffd700; /* brighter yellow for navbar links */
+  color: #ffcc00;
   text-decoration: none;
   font-size: 16px;
   font-weight: 600;
@@ -98,8 +98,8 @@ nav {
 }
 
 .nav-list li a:hover {
-  background-color: #ffcc33; /* soft yellow hover */
-  color: #002b80; /* dark blue text on hover for contrast */
+  background-color: rgba(255,204,0,0.2);
+  color: #fff;
 }
 
 /* Sections */
@@ -115,8 +115,9 @@ section {
 section h2 {
   font-size: 28px;
   margin-bottom: 15px;
-  color: #ffd700; /* bright yellow for headings */
+  color: #002b80;
 }
+
 section p, section ul li {
   font-size: 16px;
   line-height: 1.7;
@@ -216,4 +217,3 @@ footer {
   .cta-buttons { flex-direction: column; width: 100%; align-items: center; }
   .call-btn, .email-btn { width: 160px; font-size: 15px; padding: 12px 0; }
 }
-
